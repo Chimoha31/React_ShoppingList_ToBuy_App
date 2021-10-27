@@ -1,60 +1,52 @@
 /* 共通 */
 body {
   /* border: 2px solid pink; */
-  font-family: sans-serif;
+  background: linear-gradient(-135deg, #d4c1af, #c2a3d8) fixed;
+  font-family: "ヒラギノ丸ゴ ProN","Hiragino Maru Gothic ProN";
   margin: 0;
-}
-
-h4 {
-  text-align: center;
-}
-
-ul {
-  padding-left: 0;
 }
 
 li {
   list-style: none;
 }
 
-button {
-  display: block;
-  margin: 0.5rem;
-  height: 1.8rem;
-  width: 4.5rem;
+ul {
+  padding-left: 0;
 }
 
-/* タイトル */
+.title {
+  text-align: center;
+}
+
 .header_name {
-  /* border: 2px solid blue; */
-  background: linear-gradient(-135deg, #E4A972, #9941D8) fixed;
-  margin: 0;
+  /* background: linear-gradient(-135deg, #E4A972, #9941D8) fixed; */
   text-align: center;
 }
 
-/* 買う物を入力する部分 */
 .input_area {
-  /* border: 2px solid orange; */
   text-align: center;
-  display: flex;
-  padding-left: 15%;
+  /* background: linear-gradient(-135deg, #E4A972, #9941D8) fixed; */
 }
 
 input {
-  margin-right: 1rem;
+  width: 8rem;
+  height: 1.5rem;
 }
 
-/* カートに入れる前の状態 */
 .not_inthe_cart {
-  /* border: 2px solid green; */
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  background: linear-gradient(-135deg, #E4A972, #9941D8) fixed;
 }
 
 .inthe_cart {
   display: flex;
   justify-content: space-around;
+  background: linear-gradient(-135deg, #d3ab88, #6d4986) fixed;
 }
+
+
+
+
 
 

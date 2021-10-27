@@ -5,9 +5,9 @@ const App = () => {
   // 入力機能State化
   const [tobuyText, setTobuyText] = useState("");
   // カート前State化
-  const [notIntheCart, setNotIntheCart] = useState([]);
+  const [notIntheCart, setNotIntheCart] = useState(["あああ"]);
   // カート後State化
-  const [intheCart, setIntheCart] = useState([]);
+  const [intheCart, setIntheCart] = useState(["いいい"]);
 
   // 関数
   // 入力可能にする
@@ -63,18 +63,18 @@ const App = () => {
       </div>
 
       {/* カートに入れる前の状態リスト */}
-        <h4 className="title">買い物リスト</h4>
-        <ul>
-          {notIntheCart.map((tobuy, index) => {
-            return (
-              <div key={tobuy} className="not_inthe_cart">
-                <li>{tobuy}</li>
-                <button onClick={() => onClickComplete(index)}>完了</button>
-                <button onClick={() => onClickDelete(index)}>削除</button>
-              </div>
-            );
-          })}
-        </ul>
+      <h4 className="title">買い物リスト</h4>
+      <ul>
+        {notIntheCart.map((tobuy, index) => {
+          return (
+            <div key={tobuy} className="not_inthe_cart">
+              <li>{tobuy}</li>
+              <button onClick={() => onClickComplete(index)}>完了</button>
+              <button onClick={() => onClickDelete(index)}>削除</button>
+            </div>
+          );
+        })}
+      </ul>
 
       {/* カートに入れてある状態リスト */}
       <h4 className="title">カートに入れ済</h4>
