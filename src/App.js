@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import InputTobuy from "./components/InputTobuy";
 import NotIntheCart from "./components/NotIntheCart";
 import IntheCart from "./components/IntheCart";
+// import Rice from './img/kome.jpg';
 import "./App.css";
 
 const App = () => {
@@ -51,6 +52,7 @@ const App = () => {
 
   return (
     <>
+    {/* <img src={Rice} /> */}
       <div className="addition_name">
         <h3>お母の買い物リスト</h3>
       </div>
