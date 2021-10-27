@@ -1,0 +1,5 @@
+.not_inthe_cart {
+  display: flex;
+  /* justify-content: space-around; */
+  background: linear-gradient(-135deg, #E4A972, #9941D8) fixed;
+}

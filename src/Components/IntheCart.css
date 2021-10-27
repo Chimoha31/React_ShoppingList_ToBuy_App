@@ -1,0 +1,6 @@
+
+.inthe_cart {
+  display: flex;
+  justify-content: space-around;
+  background: linear-gradient(-135deg, #d3ab88, #6d4986) fixed;
+}

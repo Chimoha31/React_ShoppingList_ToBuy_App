@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-import InputTobuy from "./Components/InputTobuy";
+import InputTobuy from "./components/InputTobuy";
+import NotIntheCart from "./components/NotIntheCart";
+import IntheCart from "./components/IntheCart";
 import "./App.css";
 
 const App = () => {
@@ -8,7 +10,7 @@ const App = () => {
   // カート前State化
   const [notIntheCart, setNotIntheCart] = useState(["しょうゆ"]);
   // カート後State化
-  const [intheCart, setIntheCart] = useState([]);
+  const [intheCart, setIntheCart] = useState(["tamago"]);
 
   // 関数
   // 入力可能にする
@@ -49,7 +51,7 @@ const App = () => {
 
   return (
     <>
-      <div className="header_name">
+      <div className="addition_name">
         <h3>お母の買い物リスト</h3>
       </div>
 
@@ -61,39 +63,14 @@ const App = () => {
       />
 
       {/* カートに入れる前の状態リスト */}
-      <h4 className="title">買い物リスト</h4>
-      <ul>
-        {notIntheCart.map((tobuy, index) => {
-          return (
-            <div key={tobuy} className="not_inthe_cart">
-              <div>
-                <li>{tobuy}</li>
-              </div>
-              <div className="btn">
-                <button onClick={() => onClickComplete(index)}>完了</button>
-                <button onClick={() => onClickDelete(index)}>削除</button>
-              </div>
-            </div>
-          );
-        })}
-      </ul>
+      <NotIntheCart
+        notIntheCart={notIntheCart}
+        onClickComplete={onClickComplete}
+        onClickDelete={onClickDelete}
+      />
 
       {/* カートに入れてある状態リスト */}
-      <h4 className="title">カートに入れ済</h4>
-      <ul>
-        {intheCart.map((tobuy, index) => {
-          return (
-            <div key={tobuy} className="inthe_cart">
-              <div>
-                <li>{tobuy}</li>
-              </div>
-              <div className="btn">
-                <button onClick={() => onClickBack(index)}>戻す</button>
-              </div>
-            </div>
-          );
-        })}
-      </ul>
+     <IntheCart intheCart={intheCart} onClickBack={onClickBack} / >
     </>
   );
 };

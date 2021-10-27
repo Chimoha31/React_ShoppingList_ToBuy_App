@@ -23,23 +23,12 @@ ul {
   text-align: center;
 }
 
-.header_name {
+/*  */
+.addition_name {
   /* background: linear-gradient(-135deg, #E4A972, #9941D8) fixed; */
   text-align: center;
 }
 
-.not_inthe_cart {
-  display: flex;
-  /* justify-content: space-around; */
-  background: linear-gradient(-135deg, #E4A972, #9941D8) fixed;
-}
-
-
-.inthe_cart {
-  display: flex;
-  justify-content: space-around;
-  background: linear-gradient(-135deg, #d3ab88, #6d4986) fixed;
-}
 
 
 
