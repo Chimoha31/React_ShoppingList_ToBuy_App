@@ -1,13 +1,14 @@
 import React, { useState } from "react";
+import InputTobuy from "./Components/InputTobuy";
 import "./App.css";
 
 const App = () => {
   // 入力機能State化
   const [tobuyText, setTobuyText] = useState("");
   // カート前State化
-  const [notIntheCart, setNotIntheCart] = useState(["あああ"]);
+  const [notIntheCart, setNotIntheCart] = useState(["しょうゆ"]);
   // カート後State化
-  const [intheCart, setIntheCart] = useState(["いいい"]);
+  const [intheCart, setIntheCart] = useState([]);
 
   // 関数
   // 入力可能にする
@@ -53,14 +54,11 @@ const App = () => {
       </div>
 
       {/* 買う物を入力する部分 */}
-      <div className="input_area">
-        <input
-          placeholder="買う物を入力"
-          value={tobuyText}
-          onChange={onChangeTobuyText}
-        />
-        <button onClick={onClickAdd}>追加</button>
-      </div>
+      <InputTobuy
+        tobuyText={tobuyText}
+        onChange={onChangeTobuyText}
+        onClick={onClickAdd}
+      />
 
       {/* カートに入れる前の状態リスト */}
       <h4 className="title">買い物リスト</h4>
@@ -68,9 +66,13 @@ const App = () => {
         {notIntheCart.map((tobuy, index) => {
           return (
             <div key={tobuy} className="not_inthe_cart">
-              <li>{tobuy}</li>
-              <button onClick={() => onClickComplete(index)}>完了</button>
-              <button onClick={() => onClickDelete(index)}>削除</button>
+              <div>
+                <li>{tobuy}</li>
+              </div>
+              <div className="btn">
+                <button onClick={() => onClickComplete(index)}>完了</button>
+                <button onClick={() => onClickDelete(index)}>削除</button>
+              </div>
             </div>
           );
         })}
@@ -82,8 +84,12 @@ const App = () => {
         {intheCart.map((tobuy, index) => {
           return (
             <div key={tobuy} className="inthe_cart">
-              <li>{tobuy}</li>
-              <button onClick={() => onClickBack(index)}>戻す</button>
+              <div>
+                <li>{tobuy}</li>
+              </div>
+              <div className="btn">
+                <button onClick={() => onClickBack(index)}>戻す</button>
+              </div>
             </div>
           );
         })}

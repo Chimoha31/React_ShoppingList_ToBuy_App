@@ -1,0 +1,9 @@
+.input_area {
+  text-align: center;
+  /* background: linear-gradient(-135deg, #E4A972, #9941D8) fixed; */
+}
+
+input {
+  width: 8rem;
+  height: 1.5rem;
+}

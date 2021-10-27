@@ -8,10 +8,15 @@ body {
 
 li {
   list-style: none;
+  margin-left: 1rem;
 }
 
 ul {
   padding-left: 0;
+}
+
+.btn {
+  margin: 0 0 0 auto;
 }
 
 .title {
@@ -23,21 +28,12 @@ ul {
   text-align: center;
 }
 
-.input_area {
-  text-align: center;
-  /* background: linear-gradient(-135deg, #E4A972, #9941D8) fixed; */
-}
-
-input {
-  width: 8rem;
-  height: 1.5rem;
-}
-
 .not_inthe_cart {
   display: flex;
-  justify-content: space-around;
+  /* justify-content: space-around; */
   background: linear-gradient(-135deg, #E4A972, #9941D8) fixed;
 }
+
 
 .inthe_cart {
   display: flex;
